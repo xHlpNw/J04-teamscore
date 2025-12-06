@@ -13,10 +13,12 @@ public class StringValidator {
         цифры, символы '_' '$' '.', начинаться может только с буквы);
 */
 
-    private static final String EMAIL_REGEX = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+    private static final String EMAIL_REGEX =
+            "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 
     // +7-(000)-000-00-00, дефисы и скобки необязательны;
-    private static final String PHONE_REGEX = "^\\+7\\s*(\\(\\d{3}\\)|\\d{3})[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$";
+    private static final String PHONE_REGEX =
+            "^\\+7[-\\s]?(\\(\\d{3}\\)|\\d{3})[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$";
 
     // номер ИНН (10 или 12 цифр без разделителей)
     private static final String TIN_REGEX = "^\\d{10}|\\d{12}$";
