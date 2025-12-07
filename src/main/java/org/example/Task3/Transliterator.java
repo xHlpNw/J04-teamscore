@@ -29,7 +29,7 @@ public class Transliterator {
         String[][] sortedRules = Arrays.copyOf(RULES, RULES.length);
         Arrays.sort(
                 sortedRules,
-                Comparator.comparingInt(a -> a[1].length())
+                Comparator.comparingInt((String[] a) -> a[1].length()).reversed()
         );
         for (String[] rule : sortedRules) {
             LAT_TO_CYR.put(rule[1], rule[0]);
